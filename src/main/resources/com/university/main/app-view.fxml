@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="570.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.university.controllers.UniversityController">
+    <VBox spacing="3" HBox.hgrow="ALWAYS">
+        <MenuBar VBox.vgrow="ALWAYS">
+            <menus>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onInfoButtonClick" text="Inforamtion" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TableView fx:id="universityTable" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="nameColumn" text="Name" />
+                <TableColumn fx:id="cityColumn" text="City" />
+                <TableColumn fx:id="countryColumn" text="Country" />
+                <TableColumn fx:id="numberOfStudentsColumn" text="Number of Students" />
+                <TableColumn fx:id="studyProgramsColumn" text="Study Programs" />
+                <TableColumn fx:id="tuitionFeeColumn" text="Tuition Fee" />
+            </columns>
+        </TableView>
+        <TitledPane animated="false" text="Operations result">
+            <content>
+                <VBox spacing="10" HBox.hgrow="ALWAYS">
+                    <TextArea fx:id="resultTextArea" editable="false" layoutX="-31.0" layoutY="-51.0">
+                        <font>
+                            <Font size="16.0" />
+                        </font></TextArea>
+                </VBox>
+            </content>
+        </TitledPane>
+    </VBox>
+
+    <ToolBar orientation="VERTICAL">
+        <TitledPane animated="false" expanded="false" text="Find tuition fee">
+            <content>
+                <VBox spacing="10" HBox.hgrow="ALWAYS">
+                    <Button layoutX="17.0" layoutY="12.0" onAction="#onFindMinTuitionFeeButtonClick" text="Find Min Tuition Fee" />
+                    <Button layoutX="22.0" layoutY="48.0" onAction="#onFindMaxTuitionFeeButtonClick" text="Find Max Tuition Fee" />
+                </VBox>
+            </content>
+        </TitledPane>
+        <TitledPane animated="false" expanded="false" text="Search by City and Country">
+            <content>
+                <VBox spacing="10" HBox.hgrow="ALWAYS">
+                    <Label text="City:" />
+                    <TextField fx:id="cityInput" layoutX="14.0" layoutY="14.0" />
+                    <Label text="Country:" />
+                    <TextField fx:id="countryInput" layoutX="14.0" layoutY="47.0" />
+                    <Button layoutX="9.0" layoutY="77.0" onAction="#onSearchUniversityByCityAndCountryButtonClick" text="Search" />
+                </VBox>
+            </content>
+        </TitledPane>
+        <TitledPane animated="false" expanded="false" text="Sort by Number of Students">
+            <content>
+                <VBox spacing="10" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Button layoutX="40.0" layoutY="12.0" onAction="#onSortByNumberOfStudentsButtonClick" text="Sort" />
+                    </children>
+                </VBox>
+            </content>
+        </TitledPane>
+        <TitledPane animated="false" expanded="false" text="Find by Study Program">
+            <content>
+                <VBox spacing="10" HBox.hgrow="ALWAYS">
+                    <Label text="Study program:" />
+                    <TextField fx:id="studyProgramInput" layoutX="27.0" layoutY="36.0" />
+                    <Button layoutX="49.0" layoutY="90.0" mnemonicParsing="false" onAction="#onFindByStudyProgramButtonClick" text="Find" />
+                </VBox>
+            </content>
+        </TitledPane>
+        <TitledPane animated="false" expanded="false" text="Find by Number of Students">
+            <content>
+                <VBox spacing="10" HBox.hgrow="ALWAYS">
+                    <Label text="From:" />
+                    <TextField fx:id="fromNumberOfStudInput" />
+                    <Label text="To:" />
+                    <TextField fx:id="toNumberOfStudInput" />
+                    <Button layoutX="38.0" layoutY="102.0" mnemonicParsing="false" onAction="#onFindByNumberOfStudentsButtonClick" text="Find" />
+                </VBox>
+            </content>
+        </TitledPane>
+        <TitledPane animated="false" expanded="false" text="Manage Study Programs">
+            <content>
+                <VBox spacing="10" HBox.hgrow="ALWAYS">
+                    <Label text="University name:" />
+                    <TextField fx:id="universityNameInput" layoutX="13.0" layoutY="28.0" />
+                    <Label text="Study program to add:" />
+                    <TextField fx:id="studyProgramToAddInput" layoutX="13.0" layoutY="77.0" />
+
+                    <HBox spacing="10" HBox.hgrow="ALWAYS">
+                        <Button mnemonicParsing="false" onAction="#onAddStudyProgramToUniversityButtonClick" text="Add" />
+                        <Button mnemonicParsing="false" onAction="#onDeleteStudyProgramFromUniversityButtonClick" text="Delete" />
+                    </HBox>
+                </VBox>
+            </content>
+        </TitledPane>
+        <TitledPane animated="false" expanded="false" text="File management">
+            <content>
+                <VBox spacing="10" HBox.hgrow="ALWAYS">
+                    <Button layoutX="27.0" layoutY="23.0" mnemonicParsing="false" onAction="#onWriteToFileButtonClick" text="Write to file" />
+                    <Button layoutX="33.0" layoutY="65.0" mnemonicParsing="false" onAction="#onReadFromFileButtonClick" text="Read from file" />
+                </VBox>
+            </content>
+        </TitledPane>
+    </ToolBar>
+</HBox>
+
+
+

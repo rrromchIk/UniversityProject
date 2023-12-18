@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="299.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.university.controllers.InformationController">
+    <TextArea fx:id="userGuideTextArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac lectus nec dolor facilisis euismod. Nulla facilisi. Vivamus fringilla sagittis risus, vel egestas urna posuere vel. Ut rhoncus, odio id suscipit facilisis, sem elit fermentum justo, nec venenatis sem velit ut tellus. Integer tincidunt sapien vel velit tincidunt, eu varius neque dignissim. Vestibulum vel ante in velit sagittis pharetra eu et ligula. Duis et volutpat elit. Aenean fringilla eros a enim accumsan, nec tincidunt elit vulputate. Integer nec neque quis justo facilisis luctus.
+
+        Aenean sit amet eros vestibulum, tristique libero ut, tincidunt metus. Proin tristique purus sit amet magna eleifend, nec dapibus elit finibus. Nullam vel ligula vel erat aliquet fermentum in vel turpis. Morbi vehicula nulla id metus rhoncus, nec volutpat est euismod. Sed imperdiet purus at justo ultricies tempus. Integer eget orci nunc. Fusce fermentum arcu in turpis efficitur scelerisque. Suspendisse cursus quam eget augue tristique tristique.
+
+        Nullam malesuada odio vel nulla vestibulum, at cursus lacus tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Etiam feugiat bibendum nibh, ut tincidunt tortor laoreet in. Phasellus eu arcu nec dui fermentum tincidunt. Fusce nec dui eu metus volutpat feugiat. Vestibulum malesuada vestibulum nisi, vel hendrerit justo facilisis a.
+    </TextArea>
+</VBox>
